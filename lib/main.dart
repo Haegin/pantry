@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:pantry/Timer.dart';
-import 'package:pantry/timerCard.dart';
+import 'package:pantry/models/Timer.dart';
+import 'package:pantry/screens/timerCard.dart';
 
 void main() => runApp(Pantry());
 
@@ -12,16 +12,7 @@ class Pantry extends StatelessWidget {
     return MaterialApp(
       title: 'Pantry',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
       home: PantryHome(title: 'Pantry'),
     );
@@ -88,6 +79,12 @@ class _PantryHomeState extends State<PantryHome> {
         tooltip: 'Add Timer',
         child: Icon(Icons.add),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+            icon: Icon(Icons.local_drink), title: Text("Ferments")),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.receipt), title: Text("Recipes"))
+      ]),
     );
   }
 }

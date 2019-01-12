@@ -1,4 +1,4 @@
-import 'package:pantry/Timer.dart';
+import 'package:pantry/models/Timer.dart';
 import 'package:flutter/material.dart';
 
 class TimerCard extends StatefulWidget {
